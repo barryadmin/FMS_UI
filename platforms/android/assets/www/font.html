@@ -1,0 +1,73 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1, maximum-scale=1.5, user-scalable=1">
+	<title>Fix My Street</title>
+	<link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.2.min.css">
+	<link rel="stylesheet" href="css/themes/default/jqm-demos.css">
+	<link rel="shortcut icon" href="favicon.ico">
+ 	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.mobile-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+ 	<script src="cordova.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+        //wait for device api libraries to load
+        //
+    	document.addEventListener("deviceready", onDeviceReady, false);
+    
+    	// device apis are available
+    	function onDeviceReady() {
+    		// empty
+    	}
+
+    	function showAlert() {
+    		navigator.notification.alert(
+    	       'Message box please disply', // message
+    	       alertDismissed,             // no callback
+    	       'Message Box Title',         // title
+    	       'Continue'                   // button texr
+    		);    		
+    	}
+        function  alertDismissed(){
+            navigator.notification.alert("alert box is dismissed");
+        }
+        function showAlert1() {
+        	alert('Hello World!');
+        }
+    	
+     </script>
+
+</head>
+
+<body>
+
+<div class="txtwrapper">
+<div data-role="page">
+	<div data-role="header">
+		<h1>Set Font Size Screen</h1>
+		<a href="index.html" data-icon="home" class="ui-btn-right" data-direction="reverse">Home</a>
+	</div><!-- /header -->
+
+
+	<div role="main" class="ui-content">
+ <!--      <ul data-role="listview">
+          <li data-icon="false"><a href="font.html" id="system">System default font size</a></li>    
+          <li data-icon="false"><a href="font.html" id="large" onClick="javascript:displayLargeFont();">Increase text size by 20%</a></li>    
+          <li data-icon="false"><a href="font.html" id="xlarge">Increase text size by 30%</a></li>    
+      </ul>-->
+    
+     <p><a href="#" data-inline="button" data-role="button" data-ajax="false" onclick="showAlert(); return false;">Show Alert</a></p>
+    
+      <br/><br/>
+      <P>This sentence is used to demostrate the font size currently displayed. Use the above buttons to increase or decrease font size, click the below button to set font size.</p>
+      <br/><br/>
+      <input type="button" value="Set font size" />
+	</div><!-- /content -->
+
+</div><!-- /page -->
+</div><!--  textWrapper -->
+
+</body>
+</html>
